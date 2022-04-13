@@ -66,6 +66,11 @@
 							"pm.test(\"name property found in args\", function () {\r",
 							"    \r",
 							"    pm.expect(jsonData.args).to.have.property(\"name\").and.to.be.eqls(\"john\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"firstname property found in args\", function () {\r",
+							"    \r",
+							"    pm.expect(jsonData.args).to.have.property(\"firstname\").and.to.be.eqls(\"smith\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -76,7 +81,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "postman-echo.com/get?name=john",
+					"raw": "postman-echo.com/get?name=john&firstname=smith",
 					"host": [
 						"postman-echo",
 						"com"
@@ -88,6 +93,10 @@
 						{
 							"key": "name",
 							"value": "john"
+						},
+						{
+							"key": "firstname",
+							"value": "smith"
 						}
 					]
 				}
